@@ -3,7 +3,7 @@
 @import "foundation";
 
 body {
-  background: #162B37;
+  // background: #162B37;
   color: #EBEDED;
 }
 
@@ -66,12 +66,29 @@ h2 {
 
 .home {
 
+  .leftBox {
+    background-color: white;
+    width: 20%;
+    height: 100vh;
+    position: absolute;
+    background-color: #162B37;
+    text-align: center;
+
+    img {
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+
   .bigLogo {
     max-width: 50%;
     margin: 0 auto;
+    display: inline-block;
   }
 
   .homeMenu {
+    color: #162B37;
+    text-align: center;
 
     ul {
       list-style: none;
@@ -85,7 +102,7 @@ h2 {
 
 
         a {
-          color: #C0C6C9;
+          color: #162B37;
         }
 
         a:hover {

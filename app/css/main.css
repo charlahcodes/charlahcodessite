@@ -6388,7 +6388,6 @@ th.hide-for-touch {
     display: table-cell !important; } }
 
 body {
-  background: #162B37;
   color: #EBEDED; }
 
 button {
@@ -6434,22 +6433,37 @@ h2 {
   .container a {
     color: #EBEDED; }
 
+.home .leftBox {
+  background-color: white;
+  width: 20%;
+  height: 100vh;
+  position: absolute;
+  background-color: #162B37;
+  text-align: center; }
+  .home .leftBox img {
+    max-height: 100%;
+    max-width: 100%; }
+
 .home .bigLogo {
   max-width: 50%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  display: inline-block; }
 
-.home .homeMenu ul {
-  list-style: none;
+.home .homeMenu {
+  color: #162B37;
   text-align: center; }
-  .home .homeMenu ul li {
-    display: inline-block;
-    color: #E08D2E;
-    font-size: 1.2em;
-    margin: 0 2px; }
-    .home .homeMenu ul li a {
-      color: #C0C6C9; }
-    .home .homeMenu ul li a:hover {
-      color: #E08D2E; }
+  .home .homeMenu ul {
+    list-style: none;
+    text-align: center; }
+    .home .homeMenu ul li {
+      display: inline-block;
+      color: #E08D2E;
+      font-size: 1.2em;
+      margin: 0 2px; }
+      .home .homeMenu ul li a {
+        color: #162B37; }
+      .home .homeMenu ul li a:hover {
+        color: #E08D2E; }
 
 .aboutPage div {
   width: 60%; }
