@@ -6435,7 +6435,7 @@ h2 {
 
 .home .leftBox {
   background-color: white;
-  width: 20%;
+  width: 20vw;
   height: 100vh;
   position: absolute;
   background-color: #162B37;
@@ -6444,6 +6444,25 @@ h2 {
     max-height: 100%;
     max-width: 100%; }
 
+.home .name {
+  font-size: 5em;
+  margin-bottom: -12.5vh; }
+
+.home .dash {
+  color: #D5862F;
+  font-size: 4em;
+  margin-bottom: -0.7vh; }
+
+.home .title {
+  font-size: 2em; }
+
+.home .coming {
+  font-size: 0.8em;
+  font-style: italic;
+  position: absolute;
+  bottom: 0;
+  margin-left: 36%; }
+
 .home .bigLogo {
   max-width: 50%;
   margin: 0 auto;
@@ -6451,10 +6470,13 @@ h2 {
 
 .home .homeMenu {
   color: #162B37;
-  text-align: center; }
+  text-align: center;
+  margin-left: 18vw;
+  padding-top: 28vh; }
   .home .homeMenu ul {
     list-style: none;
-    text-align: center; }
+    text-align: center;
+    margin-top: 9vh; }
     .home .homeMenu ul li {
       display: inline-block;
       color: #E08D2E;
