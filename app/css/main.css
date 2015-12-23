@@ -6388,7 +6388,7 @@ th.hide-for-touch {
     display: table-cell !important; } }
 
 body {
-  color: #EBEDED; }
+  color: #243842; }
 
 button {
   background-color: #253842;
@@ -6401,6 +6401,9 @@ button:hover {
   border: 2px solid #D6882D; }
 
 h4 {
+  color: #D6882D; }
+
+h3 {
   color: #D6882D; }
 
 h2 {
@@ -6431,7 +6434,7 @@ h2 {
   overflow: hidden;
   margin: 15px 15px 0 15px; }
   .container a {
-    color: #EBEDED; }
+    color: #D6882D; }
 
 .home .leftBox {
   background-color: white;
@@ -6490,72 +6493,28 @@ h2 {
 .aboutPage div {
   width: 60%; }
 
-.codingPage div {
-  width: 60%; }
+.resumePage .skillsContainer .skillsTitle {
+  cursor: pointer; }
 
-.photoList {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 36px; }
-  .photoList .thumbnails ul {
-    list-style: none;
-    margin: 0;
-    padding: 0; }
-    .photoList .thumbnails ul li {
-      display: inline-block;
-      margin: 10px; }
-      .photoList .thumbnails ul li img {
-        height: 200px;
-        border: 2px solid #162B37;
-        max-height: 100%; }
-      .photoList .thumbnails ul li img:hover {
-        border: 2px solid #D6882D; }
+.resumePage .skillsContainer .skillsList {
+  display: none; }
 
-.addPhoto div {
-  text-align: right; }
-  .addPhoto div .addForm {
-    width: 60%; }
-    .addPhoto div .addForm textarea {
-      height: 100px; }
+.resumePage .experienceContainer .experienceTitle {
+  cursor: pointer; }
 
-.editPage div {
-  text-align: right; }
-  .editPage div form {
-    width: 60%; }
-    .editPage div form textarea {
-      height: 100px; }
+.resumePage .experienceContainer .experienceItem {
+  display: none;
+  cursor: pointer; }
+  .resumePage .experienceContainer .experienceItem ul {
+    display: none; }
 
-.singlePhoto .largePhoto {
-  height: 85vh; }
-  .singlePhoto .largePhoto img {
-    max-height: 100%; }
+.resumePage .educationContainer .educationTitle {
+  cursor: pointer; }
 
-.singlePhoto .photoText ul {
-  list-style: none;
-  padding: 0; }
+.resumePage .educationContainer .educationItem {
+  display: none; }
 
-.singlePhoto .photoText button {
-  margin-top: 52.5vh; }
-
-footer {
-  clear: both;
-  width: 100%;
-  height: 25px;
-  background-color: #243842;
-  color: #BFC5C8;
-  position: absolute;
-  bottom: 0;
-  left: 0; }
-  footer p {
-    text-align: center;
-    position: relative;
-    top: 50%;
-    font-size: 13px;
-    transform: translateY(-50%);
-    margin: 0; }
-    footer p a {
-      color: #D6882D; }
-    footer p a:hover {
-      color: #D6882D; }
+.resumePage div {
+  width: 75%; }
 
 /*# sourceMappingURL=main.css.map */

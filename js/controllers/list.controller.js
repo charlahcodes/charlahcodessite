@@ -1,8 +1,8 @@
 let ListController = function ($scope, PhotosService) {
 
-  PhotosService.getPhotos().then ( (res) => {
-    $scope.photos = res.data.results;
-  });
+  // PhotosService.getPhotos().then ( (res) => {
+  //   $scope.photos = res.data.results;
+  // });
 
 };
 
