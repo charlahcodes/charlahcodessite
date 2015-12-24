@@ -1,10 +1,16 @@
 // Put any @imports here
 // See Readme for a list of supported ones
 @import "foundation";
+@import "font-awesome";
+
+$orange: #D6882D;
+$darkblue: #162B37;
+$lightblue: #9CA4A9;
+$white: #ECEEEE;
+// $font: 'Lato', sans-serif;
 
 body {
-  // background: #162B37;
-  color: #243842;
+  color: $darkblue;
 }
 
 button {
@@ -19,12 +25,16 @@ button:hover {
   border: 2px solid #D6882D;
 }
 
+pipe {
+  color: $orange;
+}
+
 h4 {
   color: #D6882D;
 }
 
 h3 {
-  color: #D6882D;
+  color: $darkblue;
 }
 
 h2 {
@@ -38,7 +48,7 @@ h2 {
 
 .top-bar {
   color: #D6882D;
-  background-color: #253842;
+  background-color: $darkblue;
 
   img {
     max-height: 100%;
@@ -46,7 +56,7 @@ h2 {
 }
 
 .top-bar-section li:not(.has-form) a:not(.button) {
-  background-color: #253842;
+  background-color: $darkblue;
   color: #EBEDED;
 }
 
@@ -152,6 +162,17 @@ h2 {
 
 .resumePage {
 
+  h3 {
+    text-align: center;
+  }
+
+  i {
+    color: $orange;
+    font-size: 12px;
+    vertical-align: middle;
+    margin-left: 1%;
+  }
+
   .skillsContainer {
 
     .skillsTitle {
@@ -177,9 +198,16 @@ h2 {
     .experienceItem {
       display: none;
       cursor: pointer;
+      margin: 0 auto;
+      text-align: center;
 
       ul {
         display: none;
+        text-align: left;
+        background-color: $white;
+        color: $darkblue;
+        border: 1px solid $darkblue;
+        padding: 0;
       }
     }
   }
@@ -196,5 +224,10 @@ h2 {
 
   div {
     width: 75%;
+  }
+
+  .link {
+    color: $orange;
+    text-align: center;
   }
 }

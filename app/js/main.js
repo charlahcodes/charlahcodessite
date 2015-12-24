@@ -14,15 +14,15 @@ var config = function config($stateProvider, $urlRouterProvider) {
     // controller: 'HomeController',
     templateUrl: 'templates/home.tpl.html'
   }).state('root', {
-    templateUrl: 'templates/layout.tpl.html'
+    templateUrl: 'templates/layout.tpl.html',
+    controller: 'RootController'
   })
   // .state('root.home', {
   //   url: '/',
   //   templateUrl: 'templates/home.tpl.html',
   //   // tells ui-router this is an abstract state (no url)
   // })
-  . // tells ui-router this is an abstract state (no url)
-  state('root.resume', {
+  .state('root.resume', {
     url: '/resume',
     controller: 'ResumeController',
     templateUrl: 'templates/resume.tpl.html'
@@ -123,18 +123,26 @@ var ResumeController = function ResumeController($scope, $state) {
 
   (0, _jquery2["default"])(".skillsTitle").click(function () {
     (0, _jquery2["default"])(this).siblings(".skillsList").toggle();
+    (0, _jquery2["default"])(this).children("i").toggleClass("fa fa-chevron-down");
+    (0, _jquery2["default"])(this).children("i").toggleClass("fa fa-chevron-up");
   });
 
   (0, _jquery2["default"])(".experienceTitle").click(function () {
     (0, _jquery2["default"])(this).siblings(".experienceItem").toggle();
+    (0, _jquery2["default"])(this).children("i").toggleClass("fa fa-chevron-down");
+    (0, _jquery2["default"])(this).children("i").toggleClass("fa fa-chevron-up");
   });
 
   (0, _jquery2["default"])(".experienceItem").click(function () {
     (0, _jquery2["default"])(this).children("ul").toggle();
+    (0, _jquery2["default"])(this).children("h6").children("i").toggleClass("fa fa-chevron-down");
+    (0, _jquery2["default"])(this).children("h6").children("i").toggleClass("fa fa-chevron-up");
   });
 
   (0, _jquery2["default"])(".educationTitle").click(function () {
     (0, _jquery2["default"])(this).siblings(".educationItem").toggle();
+    (0, _jquery2["default"])(this).children("i").toggleClass("fa fa-chevron-down");
+    (0, _jquery2["default"])(this).children("i").toggleClass("fa fa-chevron-up");
   });
 };
 
@@ -143,7 +151,34 @@ ResumeController.$inject = ['$scope', '$state'];
 exports["default"] = ResumeController;
 module.exports = exports["default"];
 
-},{"jquery":12}],6:[function(require,module,exports){
+},{"jquery":13}],6:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var _jquery = require('jquery');
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var RootController = function RootController($scope, $state) {
+
+  (0, _jquery2["default"])(".top-bar-section li:not(.has-form) a:not(.button)").click(function () {
+    console.log("Click");
+    (0, _jquery2["default"])(this).css("background-color", "#D6882D");
+    (0, _jquery2["default"])("this").siblings().css("background-color", "#253842");
+  });
+};
+
+RootController.$inject = ['$scope', '$state'];
+
+exports["default"] = RootController;
+module.exports = exports["default"];
+
+},{"jquery":13}],7:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -167,7 +202,7 @@ SingleController.$inject = ['$scope', '$stateParams', 'PhotosService', '$state']
 exports['default'] = SingleController;
 module.exports = exports['default'];
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 'use strict';
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -186,6 +221,14 @@ var _config = require('./config');
 
 var _config2 = _interopRequireDefault(_config);
 
+var _controllersRootController = require('./controllers/root.controller');
+
+var _controllersRootController2 = _interopRequireDefault(_controllersRootController);
+
+var _controllersResumeController = require('./controllers/resume.controller');
+
+var _controllersResumeController2 = _interopRequireDefault(_controllersResumeController);
+
 var _controllersAddphotoController = require('./controllers/addphoto.controller');
 
 var _controllersAddphotoController2 = _interopRequireDefault(_controllersAddphotoController);
@@ -202,17 +245,13 @@ var _controllersEditController = require('./controllers/edit.controller');
 
 var _controllersEditController2 = _interopRequireDefault(_controllersEditController);
 
-var _controllersResumeController = require('./controllers/resume.controller');
-
-var _controllersResumeController2 = _interopRequireDefault(_controllersResumeController);
-
 var _servicesPhotosService = require('./services/photos.service');
 
 var _servicesPhotosService2 = _interopRequireDefault(_servicesPhotosService);
 
-_angular2['default'].module('app', ['ui.router']).config(_config2['default']).controller('ListController', _controllersListController2['default']).controller('AddPhotoController', _controllersAddphotoController2['default']).controller('SingleController', _controllersSingleController2['default']).controller('EditController', _controllersEditController2['default']).controller('ResumeController', _controllersResumeController2['default']).service('PhotosService', _servicesPhotosService2['default']);
+_angular2['default'].module('app', ['ui.router']).config(_config2['default']).controller('ListController', _controllersListController2['default']).controller('AddPhotoController', _controllersAddphotoController2['default']).controller('SingleController', _controllersSingleController2['default']).controller('EditController', _controllersEditController2['default']).controller('ResumeController', _controllersResumeController2['default']).controller('RootController', _controllersRootController2['default']).service('PhotosService', _servicesPhotosService2['default']);
 
-},{"./config":1,"./controllers/addphoto.controller":2,"./controllers/edit.controller":3,"./controllers/list.controller":4,"./controllers/resume.controller":5,"./controllers/single.controller":6,"./services/photos.service":8,"angular":11,"angular-ui-router":9,"jquery":12}],8:[function(require,module,exports){
+},{"./config":1,"./controllers/addphoto.controller":2,"./controllers/edit.controller":3,"./controllers/list.controller":4,"./controllers/resume.controller":5,"./controllers/root.controller":6,"./controllers/single.controller":7,"./services/photos.service":9,"angular":12,"angular-ui-router":10,"jquery":13}],9:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -264,7 +303,7 @@ PhotosService.$inject = ['$http', '$state'];
 exports['default'] = PhotosService;
 module.exports = exports['default'];
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 /**
  * State-based routing for AngularJS
  * @version v0.2.15
@@ -4635,7 +4674,7 @@ angular.module('ui.router.state')
   .filter('isState', $IsStateFilter)
   .filter('includedByState', $IncludedByStateFilter);
 })(window, window.angular);
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 /**
  * @license AngularJS v1.4.8
  * (c) 2010-2015 Google, Inc. http://angularjs.org
@@ -33654,11 +33693,11 @@ $provide.value("$locale", {
 })(window, document);
 
 !window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 require('./angular');
 module.exports = angular;
 
-},{"./angular":10}],12:[function(require,module,exports){
+},{"./angular":11}],13:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.4
  * http://jquery.com/
@@ -42870,7 +42909,7 @@ return jQuery;
 
 }));
 
-},{}]},{},[7])
+},{}]},{},[8])
 
 
 //# sourceMappingURL=main.js.map

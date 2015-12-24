@@ -3,11 +3,13 @@ import 'angular-ui-router';
 import jquery from 'jquery';
 import configFunct from './config';
 
+import RootController from './controllers/root.controller';
+import ResumeController from './controllers/resume.controller';
+
 import AddPhotoController from './controllers/addphoto.controller';
 import SingleController from './controllers/single.controller';
 import ListController from './controllers/list.controller';
 import EditController from './controllers/edit.controller';
-import ResumeController from './controllers/resume.controller';
 import PhotosService from './services/photos.service';
 
 
@@ -19,6 +21,8 @@ angular
   .controller('SingleController', SingleController)
   .controller('EditController', EditController)
   .controller('ResumeController', ResumeController)
+  .controller('RootController', RootController)
+
   .service('PhotosService', PhotosService)
   ;
 

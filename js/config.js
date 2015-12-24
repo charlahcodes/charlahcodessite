@@ -11,7 +11,7 @@ let config = function ($stateProvider, $urlRouterProvider) {
     })
     .state('root', {
       templateUrl: 'templates/layout.tpl.html',
-      // tells ui-router this is an abstract state (no url)
+      controller: 'RootController',
     })
     // .state('root.home', {
     //   url: '/',
