@@ -133,10 +133,16 @@ var ResumeController = function ResumeController($scope, $state) {
     (0, _jquery2["default"])(this).children("i").toggleClass("fa fa-chevron-up");
   });
 
-  (0, _jquery2["default"])(".experienceItem").click(function () {
+  (0, _jquery2["default"])(".experienceItemTitle").click(function () {
+    (0, _jquery2["default"])(this).siblings("ul").toggle();
+    (0, _jquery2["default"])(this).children("i").toggleClass("fa fa-chevron-down");
+    (0, _jquery2["default"])(this).children("i").toggleClass("fa fa-chevron-up");
+  });
+
+  (0, _jquery2["default"])(".experienceSubitem").click(function () {
     (0, _jquery2["default"])(this).children("ul").toggle();
-    (0, _jquery2["default"])(this).children("h6").children("i").toggleClass("fa fa-chevron-down");
-    (0, _jquery2["default"])(this).children("h6").children("i").toggleClass("fa fa-chevron-up");
+    (0, _jquery2["default"])(this).children("i").toggleClass("fa fa-chevron-down");
+    (0, _jquery2["default"])(this).children("i").toggleClass("fa fa-chevron-up");
   });
 
   (0, _jquery2["default"])(".educationTitle").click(function () {
@@ -152,13 +158,13 @@ exports["default"] = ResumeController;
 module.exports = exports["default"];
 
 },{"jquery":13}],6:[function(require,module,exports){
-"use strict";
+'use strict';
 
-Object.defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, '__esModule', {
   value: true
 });
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
 var _jquery = require('jquery');
 
@@ -166,17 +172,21 @@ var _jquery2 = _interopRequireDefault(_jquery);
 
 var RootController = function RootController($scope, $state) {
 
-  (0, _jquery2["default"])(".top-bar-section li:not(.has-form) a:not(.button)").click(function () {
-    console.log("Click");
-    (0, _jquery2["default"])(this).css("background-color", "#D6882D");
-    (0, _jquery2["default"])("this").siblings().css("background-color", "#253842");
-  });
+  // Top bar highlights current page
+  // jquery(".top-bar-section li:not(.has-form) a:not(.button)").click(
+  //   function() {
+  //     console.log("Click");
+  //     jquery(this).css("background-color", "#D6882D");
+  //     jquery("this").siblings().css("background-color", "#253842");
+  //   }
+  // );
+
 };
 
 RootController.$inject = ['$scope', '$state'];
 
-exports["default"] = RootController;
-module.exports = exports["default"];
+exports['default'] = RootController;
+module.exports = exports['default'];
 
 },{"jquery":13}],7:[function(require,module,exports){
 'use strict';

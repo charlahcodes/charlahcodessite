@@ -19,11 +19,19 @@ let ResumeController = function($scope, $state) {
     }
   );
 
-  jquery(".experienceItem").click(
+  jquery(".experienceItemTitle").click(
+    function() {
+      jquery(this).siblings("ul").toggle();
+      jquery(this).children("i").toggleClass("fa fa-chevron-down");
+      jquery(this).children("i").toggleClass("fa fa-chevron-up");
+    }
+  );
+
+  jquery(".experienceSubitem").click(
     function() {
       jquery(this).children("ul").toggle();
-      jquery(this).children("h6").children("i").toggleClass("fa fa-chevron-down");
-      jquery(this).children("h6").children("i").toggleClass("fa fa-chevron-up");
+      jquery(this).children("i").toggleClass("fa fa-chevron-down");
+      jquery(this).children("i").toggleClass("fa fa-chevron-up");
     }
   );
 

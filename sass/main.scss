@@ -162,6 +162,10 @@ h2 {
 
 .resumePage {
 
+  h2 {
+    text-align: center;
+  }
+
   h3 {
     text-align: center;
   }
@@ -178,13 +182,17 @@ h2 {
     .skillsTitle {
       cursor: pointer;
     }
+
+    .small-block-grid-2 {
+      list-style: square;
+    }
   
     .skillsList {
       display: none;
+      list-style: square;
 
       li {
-        // padding: 2px;
-        // margin: 2px;
+        padding: 1% 0;
       }
     }
   }
@@ -197,7 +205,6 @@ h2 {
 
     .experienceItem {
       display: none;
-      cursor: pointer;
       margin: 0 auto;
       text-align: center;
 
@@ -206,8 +213,19 @@ h2 {
         text-align: left;
         background-color: $white;
         color: $darkblue;
-        border: 1px solid $darkblue;
-        padding: 0;
+        list-style-type: square;
+
+        li {
+          padding: 1% 2%;
+        }
+
+        .experienceSubitem {
+          cursor: pointer;
+        }
+      }
+
+      .experienceItemTitle {
+        cursor: pointer;
       }
     }
   }
@@ -219,6 +237,8 @@ h2 {
 
     .educationItem {
       display: none;
+      margin: 0 auto;
+      text-align: center;
     }
   }
 
@@ -230,4 +250,56 @@ h2 {
     color: $orange;
     text-align: center;
   }
+}
+.workPage {
+  text-align: center;
+
+  .workList {
+    margin: 0 auto;
+
+    .workItem {
+      z-index: 96;
+      position: relative;
+
+      .overlay {
+        position: absolute;
+        background-color: $darkblue;
+        top:0;
+        left:0;
+        bottom:0;
+        right: 0;
+        max-width: 97%;
+        max-height: 95.5%;
+        margin-left: 1.4%;
+        z-index: 97;
+        opacity: 0.75;
+      }
+
+      .overlayText {
+        position: absolute;
+        z-index: 98;
+        margin: 0 auto;
+        top:0;
+        left:0;
+        bottom:0;
+        right: 0;
+        max-width: 97%;
+        max-height: 95.5%;
+        margin-left: 1.4%;
+
+        h3 {
+          color: $orange;
+        }
+        p {
+          text-align: left;
+          margin: 0 2%;
+          color: $white;
+        }
+      }
+
+
+
+    }
+  }
+
 }

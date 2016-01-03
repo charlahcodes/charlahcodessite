@@ -8576,6 +8576,9 @@ h2 {
 .aboutPage div {
   width: 60%; }
 
+.resumePage h2 {
+  text-align: center; }
+
 .resumePage h3 {
   text-align: center; }
 
@@ -8588,15 +8591,20 @@ h2 {
 .resumePage .skillsContainer .skillsTitle {
   cursor: pointer; }
 
+.resumePage .skillsContainer .small-block-grid-2 {
+  list-style: square; }
+
 .resumePage .skillsContainer .skillsList {
-  display: none; }
+  display: none;
+  list-style: square; }
+  .resumePage .skillsContainer .skillsList li {
+    padding: 1% 0; }
 
 .resumePage .experienceContainer .experienceTitle {
   cursor: pointer; }
 
 .resumePage .experienceContainer .experienceItem {
   display: none;
-  cursor: pointer;
   margin: 0 auto;
   text-align: center; }
   .resumePage .experienceContainer .experienceItem ul {
@@ -8604,14 +8612,21 @@ h2 {
     text-align: left;
     background-color: #ECEEEE;
     color: #162B37;
-    border: 1px solid #162B37;
-    padding: 0; }
+    list-style-type: square; }
+    .resumePage .experienceContainer .experienceItem ul li {
+      padding: 1% 2%; }
+    .resumePage .experienceContainer .experienceItem ul .experienceSubitem {
+      cursor: pointer; }
+  .resumePage .experienceContainer .experienceItem .experienceItemTitle {
+    cursor: pointer; }
 
 .resumePage .educationContainer .educationTitle {
   cursor: pointer; }
 
 .resumePage .educationContainer .educationItem {
-  display: none; }
+  display: none;
+  margin: 0 auto;
+  text-align: center; }
 
 .resumePage div {
   width: 75%; }
@@ -8619,5 +8634,42 @@ h2 {
 .resumePage .link {
   color: #D6882D;
   text-align: center; }
+
+.workPage {
+  text-align: center; }
+  .workPage .workList {
+    margin: 0 auto; }
+    .workPage .workList .workItem {
+      z-index: 96;
+      position: relative; }
+      .workPage .workList .workItem .overlay {
+        position: absolute;
+        background-color: #162B37;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        max-width: 97%;
+        max-height: 95.5%;
+        margin-left: 1.4%;
+        z-index: 97;
+        opacity: 0.75; }
+      .workPage .workList .workItem .overlayText {
+        position: absolute;
+        z-index: 98;
+        margin: 0 auto;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        max-width: 97%;
+        max-height: 95.5%;
+        margin-left: 1.4%; }
+        .workPage .workList .workItem .overlayText h3 {
+          color: #D6882D; }
+        .workPage .workList .workItem .overlayText p {
+          text-align: left;
+          margin: 0 2%;
+          color: #ECEEEE; }
 
 /*# sourceMappingURL=main.css.map */
