@@ -5,6 +5,7 @@
 
 $orange: #D6882D;
 $darkblue: #162B37;
+$midblue: #253842;
 $lightblue: #9CA4A9;
 $white: #ECEEEE;
 // $font: 'Lato', sans-serif;
@@ -14,14 +15,14 @@ body {
 }
 
 button {
-  background-color: #253842;
-  color: #D6882D;
+  background-color: $midblue;
+  color: $orange;
   border: 2px solid #D6882D;
 }
 
 button:hover {
   background-color: #D6882D;
-  color: #EBEDED;
+  color: $white;
   border: 2px solid #D6882D;
 }
 
@@ -109,13 +110,13 @@ h2 {
   .title {
     font-size: 2em;
   }
-  .coming {
-    font-size: 0.8em;
-    font-style: italic;
-    position: absolute;
-    bottom: 0;
-    margin-left: 36%;
-  }
+  // .coming {
+  //   font-size: 0.8em;
+  //   font-style: italic;
+  //   position: absolute;
+  //   bottom: 0;
+  //   margin-left: 36%;
+  // }
 
   .bigLogo {
     max-width: 50%;
@@ -268,9 +269,9 @@ h2 {
         left:0;
         bottom:0;
         right: 0;
-        max-width: 97%;
-        max-height: 95.5%;
-        margin-left: 1.4%;
+        max-width: 95.5%;
+        max-height: 93.5%;
+        margin-left: 2.2%;
         z-index: 97;
         opacity: 0.75;
       }
@@ -279,6 +280,7 @@ h2 {
         position: absolute;
         z-index: 98;
         margin: 0 auto;
+        padding: 0 2%;
         top:0;
         left:0;
         bottom:0;
@@ -286,6 +288,7 @@ h2 {
         max-width: 97%;
         max-height: 95.5%;
         margin-left: 1.4%;
+        font-size: 1em;
 
         h3 {
           color: $orange;
@@ -295,10 +298,11 @@ h2 {
           margin: 0 2%;
           color: $white;
         }
+
+        button {
+          margin-top: 2%;
+        }
       }
-
-
-
     }
   }
 
