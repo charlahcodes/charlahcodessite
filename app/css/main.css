@@ -8467,6 +8467,10 @@ th.hide-for-touch {
 .fa-percent:before {
   content: ""; }
 
+@media screen and (max-device-width: 736px) {
+  .homeMenu ul {
+    font-size: 30px; } }
+
 body {
   color: #162B37; }
 
@@ -8531,16 +8535,24 @@ h2 {
     max-width: 100%; }
 
 .home .name {
-  font-size: 5em;
-  margin-bottom: -12.5vh; }
+  font-size: 5.5em; }
 
 .home .dash {
   color: #D5862F;
   font-size: 4em;
-  margin-bottom: -0.7vh; }
+  margin-top: -8%; }
 
 .home .title {
-  font-size: 2em; }
+  font-size: 2.3em;
+  margin-top: -0.5%; }
+
+.home .coming {
+  font-size: 0.8em;
+  font-style: italic;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-left: 36%; }
 
 .home .bigLogo {
   max-width: 50%;
@@ -8555,11 +8567,11 @@ h2 {
   .home .homeMenu ul {
     list-style: none;
     text-align: center;
-    margin-top: 9vh; }
+    margin-top: 22vh;
+    font-size: 25px; }
     .home .homeMenu ul li {
       display: inline-block;
       color: #E08D2E;
-      font-size: 1.2em;
       margin: 0 2px; }
       .home .homeMenu ul li a {
         color: #162B37; }

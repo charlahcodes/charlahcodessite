@@ -10,6 +10,12 @@ $lightblue: #9CA4A9;
 $white: #ECEEEE;
 // $font: 'Lato', sans-serif;
 
+@media screen and (max-device-width: 736px) {
+  .homeMenu ul {
+    font-size: 30px;
+  }
+}
+
 body {
   color: $darkblue;
 }
@@ -96,27 +102,28 @@ h2 {
   }
 
   .name {
-    font-size: 5em;
-    margin-bottom: -12.5vh;
+    font-size: 5.5em;
 
   }
 
   .dash {
     color: #D5862F;
     font-size: 4em;
-    margin-bottom: -0.7vh;
+    margin-top: -8%;
   }
 
   .title {
-    font-size: 2em;
+    font-size: 2.3em;
+    margin-top: -0.5%;
   }
-  // .coming {
-  //   font-size: 0.8em;
-  //   font-style: italic;
-  //   position: absolute;
-  //   bottom: 0;
-  //   margin-left: 36%;
-  // }
+  .coming {
+    font-size: 0.8em;
+    font-style: italic;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-left: 36%;
+  }
 
   .bigLogo {
     max-width: 50%;
@@ -133,12 +140,12 @@ h2 {
     ul {
       list-style: none;
       text-align: center;
-      margin-top: 9vh;
+      margin-top: 22vh;
+      font-size: 25px;
 
       li {
         display: inline-block;
         color: #E08D2E;
-        font-size: 1.2em;
         margin: 0 2px;
 
 
