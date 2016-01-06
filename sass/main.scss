@@ -273,7 +273,7 @@ h2 {
         max-height: 93.5%;
         margin-left: 2.2%;
         z-index: 97;
-        opacity: 0.75;
+        opacity: 0.85;
       }
 
       .overlayText {
@@ -289,19 +289,23 @@ h2 {
         max-height: 95.5%;
         margin-left: 1.4%;
         font-size: 1em;
+        text-align: center;
 
         h3 {
           color: $orange;
         }
         p {
           text-align: left;
-          margin: 0 2%;
+          margin: 1.5% 2%;
           color: $white;
         }
-
         button {
           margin-top: 2%;
         }
+
+      }
+      .screenshot {
+        border: 1px solid $darkblue;
       }
     }
   }

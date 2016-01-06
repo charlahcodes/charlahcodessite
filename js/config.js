@@ -25,7 +25,7 @@ let config = function ($stateProvider, $urlRouterProvider) {
     })
     .state('root.work', {
       url: '/work',
-      // controller: 'HomeController',
+      controller: 'WorkController',
       templateUrl: 'templates/work.tpl.html'
     })
     .state('root.contact', {

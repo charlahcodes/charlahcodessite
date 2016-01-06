@@ -8646,7 +8646,7 @@ h2 {
         max-height: 93.5%;
         margin-left: 2.2%;
         z-index: 97;
-        opacity: 0.75; }
+        opacity: 0.85; }
       .workPage .workList .workItem .overlayText {
         position: absolute;
         z-index: 98;
@@ -8659,14 +8659,17 @@ h2 {
         max-width: 97%;
         max-height: 95.5%;
         margin-left: 1.4%;
-        font-size: 1em; }
+        font-size: 1em;
+        text-align: center; }
         .workPage .workList .workItem .overlayText h3 {
           color: #D6882D; }
         .workPage .workList .workItem .overlayText p {
           text-align: left;
-          margin: 0 2%;
+          margin: 1.5% 2%;
           color: #ECEEEE; }
         .workPage .workList .workItem .overlayText button {
           margin-top: 2%; }
+      .workPage .workList .workItem .screenshot {
+        border: 1px solid #162B37; }
 
 /*# sourceMappingURL=main.css.map */

@@ -28,7 +28,7 @@ var config = function config($stateProvider, $urlRouterProvider) {
     templateUrl: 'templates/resume.tpl.html'
   }).state('root.work', {
     url: '/work',
-    // controller: 'HomeController',
+    controller: 'WorkController',
     templateUrl: 'templates/work.tpl.html'
   }).state('root.contact', {
     url: '/contact',
@@ -43,70 +43,6 @@ exports['default'] = config;
 module.exports = exports['default'];
 
 },{}],2:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-var AddPhotoController = function AddPhotoController($scope, PhotosService, $state) {
-
-  // $scope.addPhoto = (obj) => {
-  //   PhotosService.addPhoto(obj).then( (res) => {
-  //     $scope.photo = {};
-  //     $state.go('root.photography');
-  //   });
-  // };
-
-};
-
-AddPhotoController.$inject = ['$scope', 'PhotosService', '$state'];
-
-exports['default'] = AddPhotoController;
-module.exports = exports['default'];
-
-},{}],3:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-var EditController = function EditController($scope, $stateParams, PhotosService, $state) {
-
-  // PhotosService.getPhoto($stateParams.photoId).then( (res) => {
-  //   $scope.singlePhoto = res.data;
-  // });
-
-  // $scope.updatePhoto = function (obj) {
-  //   PhotosService.update(obj).then( (res) => {
-  //     $state.go('root.photography');
-  //   });
-  // };
-
-};
-EditController.$inject = ['$scope', '$stateParams', 'PhotosService', '$state'];
-exports['default'] = EditController;
-module.exports = exports['default'];
-
-},{}],4:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-var ListController = function ListController($scope, PhotosService) {
-
-  // PhotosService.getPhotos().then ( (res) => {
-  //   $scope.photos = res.data.results;
-  // });
-
-};
-
-ListController.$inject = ['$scope', 'PhotosService'];
-
-exports['default'] = ListController;
-module.exports = exports['default'];
-
-},{}],5:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -157,7 +93,7 @@ ResumeController.$inject = ['$scope', '$state'];
 exports["default"] = ResumeController;
 module.exports = exports["default"];
 
-},{"jquery":13}],6:[function(require,module,exports){
+},{"jquery":9}],3:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -188,31 +124,40 @@ RootController.$inject = ['$scope', '$state'];
 exports['default'] = RootController;
 module.exports = exports['default'];
 
-},{"jquery":13}],7:[function(require,module,exports){
+},{"jquery":9}],4:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
   value: true
 });
-var SingleController = function SingleController($scope, $stateParams, PhotosService, $state) {
 
-  // PhotosService.getPhoto($stateParams.photoId).then( (res) => {
-  //   $scope.singlePhoto = res.data;
-  // });
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-  // $scope.deletePhoto = function (obj) {
-  //   PhotosService.delete(obj).then( (res) => {
-  //     console.log(res);
-  //     $state.go('root.photography');
-  //   });
-  // };
+var _jquery = require('jquery');
 
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var WorkController = function WorkController($scope, $state) {
+
+  (0, _jquery2['default'])('.overlay').hide();
+  (0, _jquery2['default'])('.overlayText').hide();
+  (0, _jquery2['default'])('.screenshot').mouseenter(function () {
+    (0, _jquery2['default'])(this).siblings('.overlay').toggle();
+    (0, _jquery2['default'])(this).siblings('.overlayText').toggle();
+  });
+
+  (0, _jquery2['default'])('.overlayText').mouseleave(function () {
+    (0, _jquery2['default'])(this).siblings('.overlay').toggle();
+    (0, _jquery2['default'])(this).toggle();
+  });
 };
-SingleController.$inject = ['$scope', '$stateParams', 'PhotosService', '$state'];
-exports['default'] = SingleController;
+
+WorkController.$inject = ['$scope', '$state'];
+
+exports['default'] = WorkController;
 module.exports = exports['default'];
 
-},{}],8:[function(require,module,exports){
+},{"jquery":9}],5:[function(require,module,exports){
 'use strict';
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -239,81 +184,13 @@ var _controllersResumeController = require('./controllers/resume.controller');
 
 var _controllersResumeController2 = _interopRequireDefault(_controllersResumeController);
 
-var _controllersAddphotoController = require('./controllers/addphoto.controller');
+var _controllersWorkController = require('./controllers/work.controller');
 
-var _controllersAddphotoController2 = _interopRequireDefault(_controllersAddphotoController);
+var _controllersWorkController2 = _interopRequireDefault(_controllersWorkController);
 
-var _controllersSingleController = require('./controllers/single.controller');
+_angular2['default'].module('app', ['ui.router']).config(_config2['default']).controller('WorkController', _controllersWorkController2['default']).controller('ResumeController', _controllersResumeController2['default']).controller('RootController', _controllersRootController2['default']);
 
-var _controllersSingleController2 = _interopRequireDefault(_controllersSingleController);
-
-var _controllersListController = require('./controllers/list.controller');
-
-var _controllersListController2 = _interopRequireDefault(_controllersListController);
-
-var _controllersEditController = require('./controllers/edit.controller');
-
-var _controllersEditController2 = _interopRequireDefault(_controllersEditController);
-
-var _servicesPhotosService = require('./services/photos.service');
-
-var _servicesPhotosService2 = _interopRequireDefault(_servicesPhotosService);
-
-_angular2['default'].module('app', ['ui.router']).config(_config2['default']).controller('ListController', _controllersListController2['default']).controller('AddPhotoController', _controllersAddphotoController2['default']).controller('SingleController', _controllersSingleController2['default']).controller('EditController', _controllersEditController2['default']).controller('ResumeController', _controllersResumeController2['default']).controller('RootController', _controllersRootController2['default']).service('PhotosService', _servicesPhotosService2['default']);
-
-},{"./config":1,"./controllers/addphoto.controller":2,"./controllers/edit.controller":3,"./controllers/list.controller":4,"./controllers/resume.controller":5,"./controllers/root.controller":6,"./controllers/single.controller":7,"./services/photos.service":9,"angular":12,"angular-ui-router":10,"jquery":13}],9:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-var PhotosService = function PhotosService($http, $state) {
-
-  // let url = PARSE.URL + 'classes/photo_gallery';
-
-  // this.getPhotos = function () {   
-  //   return $http({
-  //     url: url,
-  //     headers: PARSE.CONFIG.headers,
-  //     method: 'GET',
-  //   });
-  // };
-
-  // this.getPhoto = function (photoId) {    
-  //   return $http({
-  //     method: 'GET',
-  //     url: url + '/' + photoId,
-  //     headers: PARSE.CONFIG.headers,
-  //   });
-  // };
-
-  // let Photo = function (obj) {
-  //   this.name = obj.name;
-  //   this.url = obj.url;
-  //   this.description = obj.description;
-  // };
-
-  // this.addPhoto = function (obj) {
-  //   let p = new Photo(obj);
-  //   return $http.post(url, p, PARSE.CONFIG);
-  // };
-
-  // this.update = function (obj) {
-  //   return $http.put(url + '/' + obj.objectId, obj, PARSE.CONFIG);
-  // };
-
-  // this.delete = function (obj) {
-  //   return $http.delete(url + '/' + obj.objectId, PARSE.CONFIG);
-  // };
-
-};
-
-PhotosService.$inject = ['$http', '$state'];
-
-exports['default'] = PhotosService;
-module.exports = exports['default'];
-
-},{}],10:[function(require,module,exports){
+},{"./config":1,"./controllers/resume.controller":2,"./controllers/root.controller":3,"./controllers/work.controller":4,"angular":8,"angular-ui-router":6,"jquery":9}],6:[function(require,module,exports){
 /**
  * State-based routing for AngularJS
  * @version v0.2.15
@@ -4684,7 +4561,7 @@ angular.module('ui.router.state')
   .filter('isState', $IsStateFilter)
   .filter('includedByState', $IncludedByStateFilter);
 })(window, window.angular);
-},{}],11:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 /**
  * @license AngularJS v1.4.8
  * (c) 2010-2015 Google, Inc. http://angularjs.org
@@ -33703,11 +33580,11 @@ $provide.value("$locale", {
 })(window, document);
 
 !window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
-},{}],12:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 require('./angular');
 module.exports = angular;
 
-},{"./angular":11}],13:[function(require,module,exports){
+},{"./angular":7}],9:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.4
  * http://jquery.com/
@@ -42919,7 +42796,7 @@ return jQuery;
 
 }));
 
-},{}]},{},[8])
+},{}]},{},[5])
 
 
 //# sourceMappingURL=main.js.map
