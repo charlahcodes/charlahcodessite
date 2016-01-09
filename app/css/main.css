@@ -8595,18 +8595,18 @@ h2 {
   text-align: center;
   margin-left: 18vw;
   padding-top: 28vh; }
-  .home .homeMenu .homelinks {
+  .home .homeMenu ul {
     list-style: none;
     text-align: center;
     margin-top: 22vh;
     font-size: 25px; }
-    .home .homeMenu .homelinks li {
+    .home .homeMenu ul li {
       display: inline-block;
       color: #E08D2E;
       margin: 0 2px; }
-      .home .homeMenu .homelinks li a {
+      .home .homeMenu ul li a {
         color: #162B37; }
-      .home .homeMenu .homelinks li a:hover {
+      .home .homeMenu ul li a:hover {
         color: #E08D2E; }
 
 .resumePage h2 {
