@@ -1,6 +1,33 @@
 // Put any @imports here
 // See Readme for a list of supported ones
 @import "foundation";
+@import "font-awesome";
+
+$orange: #D6882D;
+$darkblue: #162B37;
+$midblue: #253842;
+$lightblue: #9CA4A9;
+$white: #ECEEEE;
+$font: 'Lato', sans-serif;
+
+@media screen and (max-width: 64em) {
+  .overlay {
+    max-width: 86% !important;
+    max-height: 96% !important;
+    margin-left: 7% !important;
+  }
+
+  .overlayText {
+    max-width: 86% !important;
+    max-height: 95.5% !important;
+    margin-left: 8% !important;
+  }
+}
+
+@media(min-width: 40.0625em) {.top-bar-section li:not(.has-form) a:not(.button) {
+    font-family: $font;
+    // font-size: 1em;
+}}
 
 @media screen and (max-device-width: 736px) {
   .homelinks li {
@@ -9,28 +36,55 @@
 }
 
 body {
-  // background: #162B37;
-  color: #EBEDED;
+  color: $darkblue;
+  font-family: $font;
 }
 
 button {
-  background-color: #253842;
-  color: #D6882D;
+  background-color: $midblue;
+  color: $orange;
   border: 2px solid #D6882D;
+  font-family: $font;
+
 }
 
 button:hover {
   background-color: #D6882D;
-  color: #EBEDED;
+  color: $white;
   border: 2px solid #D6882D;
+}
+
+pipe {
+  color: $orange;
+}
+
+h6 {
+  font-family: $font;
+}
+
+h5 {
+  color: $darkblue;
+  font-size: 1.4em;
+  font-family: $font;
+  margin-bottom: 0;
+
+  i {
+    margin-right: 0.3%;
+  }
 }
 
 h4 {
   color: #D6882D;
 }
 
+h3 {
+  color: $darkblue;
+  font-family: $font;
+}
+
 h2 {
-  color: #D6882D;
+  color: $darkblue;
+  font-family: $font;
 }
 
 .mainContainer {
@@ -40,7 +94,7 @@ h2 {
 
 .top-bar {
   color: #D6882D;
-  background-color: #253842;
+  background-color: $darkblue;
 
   img {
     max-height: 100%;
@@ -48,7 +102,7 @@ h2 {
 }
 
 .top-bar-section li:not(.has-form) a:not(.button) {
-  background-color: #253842;
+  background-color: $darkblue;
   color: #EBEDED;
 }
 
@@ -66,7 +120,11 @@ h2 {
   margin: 15px 15px 0 15px;
 
   a {
-    color: #EBEDED;
+    color: #D6882D;
+  }
+
+  a:hover {
+    color: $darkblue;
   }
 }
 
@@ -88,13 +146,12 @@ h2 {
 
   .name {
     font-size: 5.5em;
-
   }
 
   .dash {
     color: #D5862F;
     font-size: 4em;
-    margin-top: -8%;
+    margin-top: -7.7%;
   }
 
   .title {
@@ -146,136 +203,165 @@ h2 {
   }
 }
 
-.aboutPage {
+.resumePage {
 
-  div {
-    width: 60%;
-  }
-}
-
-.codingPage {
-
-  div {
-    width: 60%;
-  }
-}
-
-.photoList {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 36px;
-
-  .thumbnails {
-
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-
-      li {
-        display: inline-block;
-        margin: 10px;
-
-        img {
-          height: 200px;
-          border: 2px solid #162B37;
-          max-height: 100%;
-        }
-
-        img:hover {
-          border: 2px solid #D6882D;
-        }
-      }
-    }
-  }
-}
-
-.addPhoto {
-
-  div {
-    text-align:right;
-    
-    .addForm {
-      width: 60%;
-
-      textarea {
-        height: 100px;
-      }
-    }
-  }
-}
-
-.editPage {
-
-  div {
-    text-align:right;
-    
-    form {
-      width: 60%;
-
-      textarea {
-        height: 100px;
-      }
-    }
-  }
-}
-
-.singlePhoto {
-
-  .largePhoto {
-    height: 85vh;
-
-    img {
-      max-height: 100%;
-    }
-
-  }
-
-  .photoText {
-
-    ul {
-      list-style: none;
-      padding: 0;
-
-      li {
-        .photoTitle {
-
-        }
-        .photoDescription {
-        }
-      }
-    }
-
-    button {
-      margin-top: 52.5vh;
-    }
-  }
-}
-
-footer {
-  clear: both;
-  width: 100%;
-  height: 25px;
-  background-color: #243842;
-  color: #BFC5C8;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-
-  p {
+  h2 {
     text-align: center;
-    position: relative;
-    top: 50%;
-    font-size: 13px;
-    transform: translateY(-50%);
-    margin: 0;
+  }
 
-    a {
-      color: #D6882D;
+  h3 {
+    text-align: center;
+  }
+
+  i {
+    color: $orange;
+    font-size: 12px;
+    vertical-align: middle;
+    margin-left: 1%;
+  }
+
+  .skillsContainer {
+
+    .skillsTitle {
+      cursor: pointer;
     }
 
-    a:hover {
-      color: #D6882D;
+    .small-block-grid-2 {
+      list-style: square;
+    }
+  
+    .skillsList {
+      display: none;
+      list-style: square;
+
+      li {
+        padding: 1% 0;
+      }
     }
   }
+
+  .experienceContainer {
+
+    .experienceTitle {
+      cursor:pointer;
+    }
+
+    .experienceItem {
+      display: none;
+      margin: 0 auto;
+      text-align: center;
+
+      ul {
+        display: none;
+        text-align: left;
+        background-color: $white;
+        color: $darkblue;
+        list-style-type: square;
+
+        li {
+          padding: 1% 2%;
+        }
+
+        .experienceSubitem {
+          cursor: pointer;
+        }
+      }
+
+      .experienceItemTitle {
+        cursor: pointer;
+      }
+    }
+  }
+  .educationContainer {
+
+    .educationTitle {
+      cursor: pointer;
+    }
+
+    .educationItem {
+      display: none;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  div {
+    width: 75%;
+  }
+
+  .link {
+    color: $orange;
+    text-align: center;
+  }
+}
+.workPage {
+  text-align: center;
+
+  h5 {
+    margin-top: -1%;
+  }
+
+  .workList {
+    margin: 0 auto;
+    width: 95vw;
+
+
+    .workItem {
+      z-index: 96;
+      position: relative;
+      display: inline-block;
+
+      .overlay {
+        position: absolute;
+        background-color: $darkblue;
+        top:0;
+        left:0;
+        bottom:0;
+        right: 0;
+        max-width: 95.5%;
+        max-height: 93%;
+        margin-left: 2.2%;
+        z-index: 97;
+        opacity: 0.85;
+      }
+
+      .overlayText {
+        position: absolute;
+        z-index: 98;
+        margin: 0 auto;
+        padding: 0 2%;
+        top:0;
+        left:0;
+        bottom:0;
+        right: 0;
+        max-width: 97%;
+        max-height: 95.5%;
+        margin-left: 1.4%;
+        text-align: center;
+
+        h3 {
+          color: $orange;
+          font-size: 1em;
+          font-weight: bold;
+        }
+        p {
+          text-align: left;
+          margin: 1.5% 2%;
+          color: $white;
+          font-size: 1em;
+        }
+        button {
+          margin-top: 2%;
+        }
+
+      }
+      .screenshot {
+        border: 1px solid $darkblue;
+      }
+    }
+  }
+}
+
+.connectPage {
+  text-align: center;
 }
