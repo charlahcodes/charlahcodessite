@@ -29,6 +29,12 @@ $font: 'Lato', sans-serif;
     // font-size: 1em;
 }}
 
+@media screen and (max-device-width: 736px) {
+  .homelinks li {
+    font-size: 30px;
+  }
+}
+
 body {
   color: $darkblue;
   font-family: $font;
@@ -173,7 +179,7 @@ h2 {
     margin-left: 18vw;
     padding-top: 28vh;
 
-    ul {
+    .homelinks {
       list-style: none;
       text-align: center;
       margin-top: 22vh;

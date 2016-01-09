@@ -8481,6 +8481,10 @@ th.hide-for-touch {
   .top-bar-section li:not(.has-form) a:not(.button) {
     font-family: "Lato", sans-serif; } }
 
+@media screen and (max-device-width: 736px) {
+  .homelinks li {
+    font-size: 30px; } }
+
 body {
   color: #162B37;
   font-family: "Lato", sans-serif; }
@@ -8591,18 +8595,18 @@ h2 {
   text-align: center;
   margin-left: 18vw;
   padding-top: 28vh; }
-  .home .homeMenu ul {
+  .home .homeMenu .homelinks {
     list-style: none;
     text-align: center;
     margin-top: 22vh;
     font-size: 25px; }
-    .home .homeMenu ul li {
+    .home .homeMenu .homelinks li {
       display: inline-block;
       color: #E08D2E;
       margin: 0 2px; }
-      .home .homeMenu ul li a {
+      .home .homeMenu .homelinks li a {
         color: #162B37; }
-      .home .homeMenu ul li a:hover {
+      .home .homeMenu .homelinks li a:hover {
         color: #E08D2E; }
 
 .resumePage h2 {
